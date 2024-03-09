@@ -5,7 +5,7 @@ A project for draw using camera
 ### create virtual environment and activate
 ```
 python -m venv <env-name>
-cd <env-name> Scripts
+cd <env-name>/Scripts
 .\activate
 ```
 
