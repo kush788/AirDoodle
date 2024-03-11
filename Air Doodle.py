@@ -87,8 +87,6 @@ while ret:
 
                 landmarks.append([lmx, lmy])
 
-
-
     cv2.imshow("Output", frame)
     cv2.imshow("Paint", paintWindow)
 
