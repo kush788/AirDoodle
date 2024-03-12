@@ -45,6 +45,6 @@ pip install -r requirements.txt
 
 Run the project using:
 ```angular2html
-python "Air Doodle.py"
+python AirDoodle.py
 ```
 
