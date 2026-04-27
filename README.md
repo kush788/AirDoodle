@@ -26,7 +26,7 @@ With the Air Doodle, you have the power to draw anything your heart desires usin
 ### Clone the project using
 ```
 git clone https://github.com/kush788/Air_Doodle.git
-cd AirDoodle
+cd Air_Doodle
 ```
 
 ### create virtual environment and activate
