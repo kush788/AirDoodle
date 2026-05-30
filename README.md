@@ -1,50 +1,107 @@
-# Air Doodle
+# ✋ Air Doodle
 
-Introducing the Air Doodle project – where your imagination takes flight with just the flick of a finger! Ever dreamed of creating art without lifting a brush? Well, get ready to turn that dream into reality as we dive into the exciting world of computer vision and machine learning.
+Introducing **Air Doodle** – where your imagination takes flight with just the flick of a finger! Draw anything your heart desires using nothing but the motion of your hands. No brush, no stylus — just pure air.
 
-With the Air Doodle, you have the power to draw anything your heart desires using nothing but the motion of your hands. By tracking the landmarks on your hand, including the fingertips, we can transform your gestures into pure creativity.
+By tracking the landmarks on your hand using computer vision and machine learning, Air Doodle transforms your gestures into art on a virtual canvas — right in your browser.
 
+🌐 **Live Demo:** [airdoodle.streamlit.app](https://airdoodle-aavgjkvkesntdgmipqxkgf.streamlit.app/) <!-- Replace with your actual URL -->
 
-# Working
+---
 
+## 🎨 Features
 
-#### 1. Hand Detection: Using OpenCV's computer vision techniques, our project will detect your hand from the background .
+- ✏️ Draw in the air using your **index finger**
+- 🤌 **Pinch** (thumb + index finger) to lift the brush
+- 🎨 Choose from **4 colors** — Blue, Green, Red, Yellow
+- 🗑️ **Clear** the canvas with a gesture or button
+- 🌐 Runs entirely in the **browser** — no installation needed
 
+---
 
-#### 2. Landmark Detection: With the help of Mediapipe, or project will track the landmarks on your hand with remarkable precision. From knuckles to fingertips, every movement will be captured in real-time.
+## ⚙️ How It Works
 
+1. **Hand Detection** — OpenCV detects your hand from the webcam feed in real-time
+2. **Landmark Detection** — MediaPipe tracks 21 hand landmarks (knuckles, fingertips, etc.) with high precision
+3. **Motion Tracking** — Your index fingertip position is mapped to strokes on the virtual canvas
+4. **Gesture Recognition** — Pinching lifts the brush; moving to the top bar switches colors or clears the canvas
 
-#### 3.Motion Tracking: As you wave your hand through the air, our system will track its every move, translating your gestures into strokes on our virtual canvas.
+---
 
-## Packages Required
+## 🚀 Try It Online
 
-- opencv-python
-- mediapipe
-- numpy
-- python Interpretor 3.8
+Just open the link below in **Chrome or Firefox** on any device with a webcam:
 
-### Clone the project using
-```
+👉 **[Open Air Doodle](https://airdoodle-aavgjkvkesntdgmipqxkgf.streamlit.app/)** <!-- Replace with your actual URL -->
+
+> 📷 A webcam (built-in or USB) is required. Works on laptops, phones, and tablets.
+
+---
+
+## 🛠️ Run Locally
+
+If you want to run it on your own machine:
+
+### Prerequisites
+- Python 3.10+
+- A webcam
+
+### Clone the repository
+```bash
 git clone https://github.com/kush788/Air_Doodle.git
 cd Air_Doodle
 ```
 
-### create virtual environment and activate
+### Create and activate a virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate      # On Linux/Mac
+venv\Scripts\activate         # On Windows
 ```
-source <venv>/bin/activate   # On Linux/Mac
-<venv>\Scripts\activate      # On Windows
-cd ../..
-```
-- Replace <venv with the path to your virtual environment directory.
 
-
-Install packages using
-```
+### Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-Run the project using:
-```angular2html
-python AirDoodle.py
+### Run the app
+```bash
+streamlit run AirDoodle.py
 ```
 
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
+
+## 📦 Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| [Streamlit](https://streamlit.io) | Web app framework |
+| [streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc) | Webcam streaming in browser |
+| [MediaPipe](https://mediapipe.dev) | Hand landmark detection |
+| [OpenCV](https://opencv.org) | Image processing |
+| [NumPy](https://numpy.org) | Array operations |
+
+---
+
+## 📁 Project Structure
+
+```
+Air_Doodle/
+├── AirDoodle.py        # Main Streamlit app
+├── requirements.txt    # Python dependencies
+├── packages.txt        # System dependencies (for Streamlit Cloud)
+└── README.md
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
